@@ -1,0 +1,9 @@
+CREATE TABLE quiz_questions (
+    id SERIAL PRIMARY KEY,
+    question TEXT NOT NULL,
+    answer TEXT NOT NULL,
+    options TEXT[] NOT NULL  -- 選択肢を配列で保存
+);
+
+select *
+from quiz_questions
