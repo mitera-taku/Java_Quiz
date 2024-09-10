@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クイズアプリ</title>
+    <link th:href="@{/CSS/main.css}" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container">
+        <h1>クイズアプリ</h1>
+
+        <form id="quiz-form">
+            <div class="question">
+                日本で最も北に位置する都道府県は？
+            </div>
+            <ul class="options">
+                <li><label><input type="radio" name="answer" value="北海道"> 北海道</label></li>
+                <li><label><input type="radio" name="answer" value="青森県"> 青森県</label></li>
+                <li><label><input type="radio" name="answer" value="秋田県"> 秋田県</label></li>
+                <li><label><input type="radio" name="answer" value="岩手県"> 岩手県</label></li>
+            </ul>
+
+            <button type="submit" class="submit-btn">回答する</button>
+        </form>
+    </div>
+
+</body>
+</html>
