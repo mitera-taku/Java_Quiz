@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>クイズ</title>
+</head>
+<body>
+    <h1>クイズ</h1>
+    
+    <form action="/submit-answers" method="post">
+        <!-- 質問のリストを繰り返し表示 -->
+        <div th:each="question, stat : ${questions}">
+            <!-- 質問を表示 -->
+            <p th:text="${question.question}"></p>
+            
+            <!-- 選択肢1 -->
+            <label>
+                <input type="radio" th:name="'q' + ${stat.index}" th:value="1" />
+                <span th:text="${question.option1}"></span>
+            </label><br/>
+            
+            <!-- 選択肢2 -->
+            <label>
+                <input type="radio" th:name="'q' + ${stat.index}" th:value="2" />
+                <span th:text="${question.option2}"></span>
+            </label><br/>
+            
+            <!-- 選択肢3 -->
+            <label>
+                <input type="radio" th:name="'q' + ${stat.index}" th:value="3" />
+                <span th:text="${question.option3}"></span>
+            </label><br/>
+            
+            <!-- 選択肢4 -->
+            <label>
+                <input type="radio" th:name="'q' + ${stat.index}" th:value="4" />
+                <span th:text="${question.option4}"></span>
+            </label><br/>
+        </div>
+        
+        <!-- 送信ボタン -->
+        <button type="submit">送信</button>
+    </form>
+</body>
+</html>

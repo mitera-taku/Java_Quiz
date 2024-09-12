@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>結果</title>
+</head>
+<body>
+    <h1>結果</h1>
+    <p>正解数: <span th:text="${correctCount}"></span> / <span th:text="${totalQuestions}"></span></p>
+    <a href="/main">
+        <button type="button">メインへ戻る</button>
+    </a>
+</body>
+</html>
